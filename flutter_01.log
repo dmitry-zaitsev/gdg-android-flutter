@@ -1,0 +1,67 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter daemon
+
+## exception
+
+FileSystemException: writeFrom failed, path = '' (OS Error: Broken pipe, errno = 32)
+
+```
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/commands/daemon.dart 67                 DaemonCommand.runInProject.<fn>.<fn>
+package:flutter_tools/src/commands/daemon.dart 151                Daemon._send
+package:flutter_tools/src/commands/daemon.dart 199                Domain._send
+package:flutter_tools/src/commands/daemon.dart 196                Domain.sendEvent
+package:flutter_tools/src/commands/daemon.dart 437                AppDomain._sendAppEvent
+package:flutter_tools/src/commands/daemon.dart 666                _AppRunLogger._sendLogEvent
+package:flutter_tools/src/commands/daemon.dart 639                _AppRunLogger.printStatus
+package:flutter_tools/src/globals.dart 31                         printStatus
+package:flutter_tools/src/resident_runner.dart 77                 ResidentRunner.startEchoingDeviceLog.<async>.<fn>
+===== asynchronous gap ===========================
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/commands/daemon.dart 67                 DaemonCommand.runInProject.<fn>.<fn>
+package:flutter_tools/src/commands/daemon.dart 151                Daemon._send
+package:flutter_tools/src/commands/daemon.dart 199                Domain._send
+package:flutter_tools/src/commands/daemon.dart 196                Domain.sendEvent
+package:flutter_tools/src/commands/daemon.dart 437                AppDomain._sendAppEvent
+package:flutter_tools/src/commands/daemon.dart 666                _AppRunLogger._sendLogEvent
+package:flutter_tools/src/commands/daemon.dart 639                _AppRunLogger.printStatus
+package:flutter_tools/src/globals.dart 31                         printStatus
+package:flutter_tools/src/resident_runner.dart 77                 ResidentRunner.startEchoingDeviceLog.<async>.<fn>
+===== asynchronous gap ===========================
+dart:io                                                           _StdSink.writeln
+package:flutter_tools/src/base/logger.dart 67                     StdoutLogger.printStatus
+package:flutter_tools/src/globals.dart 31                         printStatus
+package:flutter_tools/src/commands/daemon.dart 48                 DaemonCommand.runInProject
+package:flutter_tools/src/runner/flutter_command.dart 181         FlutterCommand._run.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/cache.dart 182                          Cache.updateAll.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/runner/flutter_command.dart             FlutterCommand._run
+package:flutter_tools/src/runner/flutter_command.dart 112         FlutterCommand.run
+package:args/command_runner.dart 176                              CommandRunner.runCommand.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 129                              CommandRunner.runCommand
+package:flutter_tools/src/runner/flutter_command_runner.dart 177  FlutterCommandRunner.runCommand.<async>
+dart:async                                                        _SyncCompleter.complete
+package:flutter_tools/src/cache.dart 69                           Cache.lock.<async>
+===== asynchronous gap ===========================
+dart:async                                                        _asyncThenWrapperHelper
+package:flutter_tools/src/runner/flutter_command_runner.dart      FlutterCommandRunner.runCommand
+package:args/command_runner.dart 103                              CommandRunner.run.<fn>
+dart:async                                                        Future.Future.sync
+package:args/command_runner.dart 103                              CommandRunner.run
+package:flutter_tools/src/runner/flutter_command_runner.dart 123  FlutterCommandRunner.run
+package:flutter_tools/executable.dart 88                          main.<async>.<fn>.<async>
+===== asynchronous gap ===========================
+package:stack_trace                                               Chain.capture
+package:flutter_tools/executable.dart 82                          main.<async>
+```
+
+## flutter doctor
+
+```
+```
