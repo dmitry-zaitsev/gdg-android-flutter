@@ -1,8 +1,5 @@
-# gdgflutter
+# gdg-android-flutter
 
-A new flutter project.
+Sample app for GDG Düsseldorf talk. 
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+Since Flutter is still in active development do not expect this project to work or even compile, but you can give it a try.
